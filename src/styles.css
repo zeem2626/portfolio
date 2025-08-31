@@ -2,4 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root { height: 100%; }
+:root {
+  --accent: #2563eb; /* blue-600 */
+}
+
+/* simple utility for hero image sizing */
+.hero-img {
+  max-width: 380px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
