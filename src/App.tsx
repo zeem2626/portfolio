@@ -154,7 +154,7 @@ export default function App(): JSX.Element {
                 </a>
 
                 <a
-                  href="https://github.com/zeem26"
+                  href="https://github.com/zeem2626"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -181,7 +181,8 @@ export default function App(): JSX.Element {
               className="flex justify-center"
             >
               <img
-                src="/hero.svg"
+                // src="/hero.svg"
+                src="/portfolio-1.png"
                 alt="Hero illustration"
                 className="hero-img rounded-lg shadow-lg"
               />
@@ -395,7 +396,7 @@ export default function App(): JSX.Element {
                   </p>
                   <div className="mt-3 flex gap-2">
                     <a
-                      href="https://github.com/zeem26"
+                      href="https://github.com/zeem2626"
                       target="_blank"
                       rel="noreferrer"
                       className="text-sm underline"
@@ -470,7 +471,7 @@ export default function App(): JSX.Element {
             🔗{" "}
             <a
               className="text-blue-600 dark:text-blue-400"
-              href="https://github.com/zeem26"
+              href="https://github.com/zeem2626"
             >
               GitHub
             </a>{" "}
