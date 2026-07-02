@@ -2,17 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --accent: #2563eb; /* blue-600 */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    @apply antialiased bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    @apply tracking-tight;
+  }
 }
 
-/* simple utility for hero image sizing */
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full border-2 border-transparent hover:bg-slate-400 dark:hover:bg-slate-700;
+}
+
+/* Custom utility for glassmorphism */
+.glass-panel {
+  @apply bg-white/75 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/80 dark:border-slate-800/80 shadow-sm;
+}
+
+.glass-nav {
+  @apply bg-white/75 dark:bg-slate-950/75 backdrop-blur-lg border-b border-slate-200/50 dark:border-slate-800/50;
+}
+
+/* Premium Gradient Text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-400 dark:to-cyan-400;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-50/50 dark:from-slate-950 dark:to-slate-900;
+}
+
+/* Glowing Border Effect for Cards */
+.glow-card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1, #06b6d4);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-card:hover {
+  transform: translateY(-4px);
+  @apply shadow-lg shadow-indigo-500/10 dark:shadow-indigo-500/5;
+}
+
+.glow-card:hover::after {
+  opacity: 0.15;
+}
+
+/* Simple utility for hero image sizing & floating animation */
 .hero-img {
-  max-width: 380px;
+  max-width: 500px;
+  animation: float 6s ease-in-out infinite;
 }
 
-html,
-body,
-#root {
-  height: 100%;
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Keyboard accessibility outline */
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950;
 }
