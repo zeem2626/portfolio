@@ -5,11 +5,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply overflow-x-hidden;
   }
 
   body {
     font-family: "Inter", sans-serif;
-    @apply antialiased bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300;
+    @apply antialiased bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300 overflow-x-hidden;
   }
 
   h1,
@@ -82,7 +83,9 @@
 
 /* Simple utility for hero image sizing & floating animation */
 .hero-img {
-  max-width: 500px;
+  /* width: 100%; */
+  /* height: auto; */
+  max-width: 450px;
   animation: float 6s ease-in-out infinite;
 }
 
