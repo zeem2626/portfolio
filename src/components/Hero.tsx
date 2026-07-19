@@ -33,7 +33,9 @@ export default function Hero(): JSX.Element {
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold mb-4 leading-tight">
-            Architecting <span className="gradient-text">Scalable Backend Systems</span> & APIs
+            Architecting
+            <span className="gradient-text">Scalable Backend Systems</span> &
+            APIs
           </h2>
           <p className="text-xl md:text-2xl font-bold mb-4 text-slate-700 dark:text-slate-300">
             {personalDetails.subtitle}
@@ -105,7 +107,7 @@ export default function Hero(): JSX.Element {
               rel="noreferrer"
               aria-label="Download Zeeshan Ahmad's Resume (Google Drive)"
             >
-              <Button variant="solid">Download Resume</Button>
+              <Button variant="solid">Resume</Button>
             </a>
             <a
               id="hero-github-link"
@@ -114,7 +116,9 @@ export default function Hero(): JSX.Element {
               rel="noreferrer"
               aria-label="View Zeeshan Ahmad's GitHub profile"
             >
-              <Button variant="outline"><SiGithub /> GitHub</Button>
+              <Button variant="outline">
+                <SiGithub /> GitHub
+              </Button>
             </a>
             <a
               id="hero-linkedin-link"
@@ -123,7 +127,9 @@ export default function Hero(): JSX.Element {
               rel="noreferrer"
               aria-label="View Zeeshan Ahmad's LinkedIn profile"
             >
-              <Button variant="outline"><FaLinkedin /> LinkedIn</Button>
+              <Button variant="outline">
+                <FaLinkedin /> LinkedIn
+              </Button>
             </a>
           </div>
 
